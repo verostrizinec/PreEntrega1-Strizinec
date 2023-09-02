@@ -1,11 +1,21 @@
 import './navbar.css'
+import Contador from '../CartWidget/CartWidget' /* ubico el carrito en navbar */
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <img src="C:\Users\veros\Desktop\coder-house\proyectoReact\tritatoTienda\img"></img>
+            <h3>Logo Tritato</h3>
 
-            <div>Item List Container</div>
+            <div>
+                <ul className='listContainer'>
+                    <li>Principal</li>
+                    <li>Elaboraciones</li>
+                    <li>Nosotros</li>
+                    <li>Comprar</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+            <Contador />
         </div>
     )
 }
