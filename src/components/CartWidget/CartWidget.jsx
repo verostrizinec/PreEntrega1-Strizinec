@@ -4,13 +4,13 @@ import './stylesCart.css'
 
 const Contador = () => {
 
-    const [count , setCount] = useState(0)
+    const [count] = useState(1)
 
-    const handCount = () => setCount(count + 1)
+    // const handCount = () => setCount(count + 1)
 
     return (
         <div>
-            <i id="carrito" className="bi bi-cart4" onClick={handCount}></i>
+            <i id="carrito" className="bi bi-cart4"></i>
             {count}
         </div>
     )

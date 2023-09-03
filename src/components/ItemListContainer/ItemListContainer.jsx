@@ -1,16 +1,17 @@
-const ItemListContainer = () => {
+import PropTypes from 'prop-types';
+import './ItemListStyles.css';
 
-    return (
-        <div>
-                <ul className='listContainer'>
-                    <li>Principal</li>
-                    <li>Elaboraciones</li>
-                    <li>Nosotros</li>
-                    <li>Comprar</li>
-                    <li>Contacto</li>
-                </ul>
-            </div>
+
+const ItemListContainer = ({ greeting }) => {
+
+    return ( 
+    
+    <h1 className="titulo" onClick={greeting}>Aportando un granito de harina al mundo.. 🍞</h1>
     )
+}
+
+ItemListContainer.propTypes = {
+    greeting: PropTypes.string.isRequired,
 }
 
 export default ItemListContainer

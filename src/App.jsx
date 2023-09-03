@@ -7,8 +7,7 @@ function App() {
     return (
         <main>
             <Navbar />
-            <ItemListContainer />
-           
+            <ItemListContainer greeting={"Aportando un granito de harina al mundo"}/>          
           
         </main>
     )
