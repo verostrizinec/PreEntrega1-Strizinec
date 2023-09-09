@@ -1,10 +1,11 @@
 import './navbar.css'
-import Contador from '../CartWidget/CartWidget' /* ubico el carrito en navbar */
+import CartWidget from '../CartWidget/CartWidget' /* ubico el carrito en navbar */
+import logo from '../../../public/img/logo-removebg-preview.png'
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <h3>Logo Tritato</h3>
+            <img className="logo" src={logo} alt="Logo Tritato" />
 
             <div>
                 <ul className='listContainer'>
@@ -15,7 +16,7 @@ const Navbar = () => {
                     <li>Contacto</li>
                 </ul>
             </div>
-            <Contador />
+            <CartWidget />
         </div>
     )
 }

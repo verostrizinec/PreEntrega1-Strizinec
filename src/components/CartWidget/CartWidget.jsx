@@ -1,8 +1,8 @@
 import { useState } from "react"
-import './stylesCart.css'
+import './CartWidget.css'
 
 
-const Contador = () => {
+const CartWidget = () => {
 
     const [count] = useState(1)
 
@@ -10,10 +10,10 @@ const Contador = () => {
 
     return (
         <div>
-            <i id="carrito" className="bi bi-cart4"></i>
+            <i className="bi bi-cart4 carrito"></i>
             {count}
         </div>
     )
 }
 
-export default Contador
+export default CartWidget

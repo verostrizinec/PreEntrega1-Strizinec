@@ -11,7 +11,7 @@ html {
 
 .navbar {
   width: 100%;
-  height: 57px;
+  height: 110px;
   background-color: #e4b866;
   display: flex;
   align-items: center;
@@ -29,4 +29,9 @@ li {
 
 h3 {
   margin-left: -5%;
+}
+
+.logo {
+  height: 150px;
+  margin-left: -150px;
 }
