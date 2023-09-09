@@ -1,6 +1,6 @@
 import './navbar.css'
 import CartWidget from '../CartWidget/CartWidget' /* ubico el carrito en navbar */
-import logo from '../../../public/img/logo-removebg-preview.png'
+import logo from '/img/logo-removebg-preview.png'
 
 const Navbar = () => {
     return (
