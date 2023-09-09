@@ -4,10 +4,9 @@ import logo from '../../../public/img/logo-removebg-preview.png'
 
 const Navbar = () => {
     return (
-        <div className="navbar">
+        <nav className="container">
+            <div className="wave">
             <img className="logo" src={logo} alt="Logo Tritato" />
-
-            <div>
                 <ul className='listContainer'>
                     <li>Principal</li>
                     <li>Elaboraciones</li>
@@ -15,9 +14,9 @@ const Navbar = () => {
                     <li>Comprar</li>
                     <li>Contacto</li>
                 </ul>
-            </div>
             <CartWidget />
-        </div>
+            </div>
+        </nav>
     )
 }
 
