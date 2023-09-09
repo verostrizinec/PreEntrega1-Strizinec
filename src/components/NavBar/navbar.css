@@ -59,13 +59,15 @@ nav {
 
 ul {
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-content: flex-start;
   list-style: none;
+  margin-top: -9%;
+  margin-left: 30%;
 }
 
 li {
-  margin-left: 5%;
+  margin-left: 2rem;
 }
 
 h3 {
@@ -75,5 +77,12 @@ h3 {
 .logo {
   height: 180px;
   margin-left: -70%;
-  margin-top: -5%;
+  margin-top: -9%;
+}
+
+.carrito {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 25%;
+
 }

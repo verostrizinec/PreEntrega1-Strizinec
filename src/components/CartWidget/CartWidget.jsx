@@ -9,8 +9,8 @@ const CartWidget = () => {
     // const handCount = () => setCount(count + 1)
 
     return (
-        <div>
-            <i className="bi bi-cart4 carrito"></i>
+        <div className="carrito">
+            <i className="bi bi-cart4"></i>
             {count}
         </div>
     )
