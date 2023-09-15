@@ -16,7 +16,7 @@ function App() {
       return await new Promise((resolve) => {
         setTimeout(() => {
           resolve(productos);
-        }, 3000);
+        }, 2000);
       });
     };
   
@@ -32,12 +32,16 @@ function App() {
         <Navbar />
         <ItemListContainer greeting={"Aportando un granito de harina al mundo.. 🍞"} />
         <div className="productos-container">
-        {products.map((producto) => (
-          <CardCustom
-            key={producto.id}
-            producto={producto}
-          />
-        ))}
+          {
+            isLoading
+            ? <div className="lds-heart"><div></div></div>
+            : 
+            products.map((producto) => (
+              <CardCustom
+                key={producto.id}
+                producto={producto}
+              />
+            ))}
       </div>
       </main>
     );
