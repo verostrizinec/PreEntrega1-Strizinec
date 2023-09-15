@@ -6,6 +6,7 @@ export const productos = [
         descripcion: "Picada comen 2, pican 4 personas",
         precio: 6500,
         contenido: "Tabla de quesos y fiambres: Jamón natural, crudo, lomo ahumado, bondiola, salamín, pategrass, reggianito y azul. Frutos secos y aceitunas rellenas. Degustación de nuestros panificados: Focaccia Italia, Pan de Campo y Chips brioches. Dips para untar.",
+        imagen: "/img/picada.jpg",
     },
     {
         id: 1,
@@ -14,6 +15,7 @@ export const productos = [
         descripcion: "Picada comen 4, pican 8 personas",
         precio: 12800,
         contenido: "Tabla de quesos y fiambres: Jamón natural, crudo, lomo ahumado, bondiola, salamín, pategrass, reggianito y azul. Frutos secos y aceitunas rellenas. Degustación de nuestros panificados: Focaccia Italia, Pan de Campo y Chips brioches. Dips para untar.",
+        imagen: "/img/picada2.png",
     },
     {
         id: 2,
@@ -22,6 +24,7 @@ export const productos = [
         descripcion: "Picada comen 6, pican 12 personas",
         precio: 19000,
         contenido: "Tabla de quesos y fiambres: Jamón natural, crudo, lomo ahumado, bondiola, salamín, pategrass, reggianito y azul. Frutos secos y aceitunas rellenas. Degustación de nuestros panificados: Focaccia Italia, Pan de Campo y Chips brioches. Dips para untar.",
+        imagen: "/img/picada.png",
     },
     {
         id: 3,
@@ -30,6 +33,7 @@ export const productos = [
         descripcion: "Brunchs",
         precio: 7000,
         contenido: "Sandwich de Lomo y Queso, en Pan de Campo. Scones de Queso y Tomillo. Mini Budines de Naranja y Amapolas. Lingote de Chocotorta. Jugo de Naranja exprimido. Infusiones.",
+        imagen: "/img/panes.JPG",
     },
     {
         id: 4,
@@ -38,6 +42,7 @@ export const productos = [
         descripcion: "Brunchs",
         precio: 8000,
         contenido: "Bagel de Jamón Crudo y Rúcula. Chipas extra queso. Mini tarta frutal con crema pastelera. Porción de carrot cake. Limonada con menta y jengibre. Infusiones.",
+        imagen: "/img/dips.jpg",
     },
     {
         id: 5,
@@ -45,6 +50,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 2500,
+        imagen: "img/focaccia.jpg",
     },
     {
         id: 6,
@@ -52,6 +58,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1600,
+        imagen: "img/focacciaPresentada.jpg",
     },
     {
         id: 7,
@@ -59,6 +66,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 2500,
+        imagen: "img/pan.jpg",
     },
     {
         id: 8,
@@ -66,6 +74,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1600,
+        imagen: "img/panEnMano.jpg",
     },
     {
         id: 9,
@@ -73,6 +82,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1000,
+        imagen: "img/amasando.JPG",
     },
     {
         id: 10,
@@ -80,6 +90,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1800,
+        imagen: "img/panCortado.jpg",
     },
     {
         id: 11,
@@ -87,6 +98,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1800,
+        imagen: "img/panCuadrado.jpg",
     },
     {
         id: 12,
@@ -94,6 +106,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1800,
+        imagen: "img/pancitos.jpg",
     },
     {
         id: 13,
@@ -101,6 +114,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 1200,
+        imagen: "img/panes.JPG",
     },
     {
         id: 14,
@@ -108,6 +122,7 @@ export const productos = [
         stock: 10,
         descripcion: "Panificados",
         precio: 800,
+        imagen: "img/tirandoHarina.jpg",
     },
     {
         id: 15,
@@ -116,5 +131,6 @@ export const productos = [
         descripcion: "Catering",
         precio: "Consultar presupuesto",
         contenido: "Mini Hamburguesas caseras con Cheddar. Sliders de Pollo/Carne desmenuzada. Empanaditas de Carne, Pollo, Jamón y Queso. Bruscchetitas caprese/Crudo y Queso. Focaccias con Salsas. Mini Bagels con rellenos varios. Tablitas de quesos y fiambres.",
+        imagen: "img/quesos.jpg",
     },
 ]

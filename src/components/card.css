@@ -1,9 +1,8 @@
-.cardContainer {
+.productos-container {
     background-color: #fff4df;
-    display: flex;
-    align-content: flex-start;
-    flex-wrap: wrap;
     margin-bottom: 2%;
     margin-top: 2%;
-    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
