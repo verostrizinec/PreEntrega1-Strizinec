@@ -1,32 +1,34 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import {HomePage, ContactPage, CheckoutPage} from '../index'
-import Card from '../components/Card'
-import ItemList from "../components/ItemList/ItemList";
 import Item from "../components/Item/Item";
-import Title from "../components/Title/Title";
 import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
+import Navbar from "../components/NavBar/NavBar";
+import ItemDetail from "../components/ItemDetail/ItemDetail";
+import ItemList from "../components/ItemList/ItemList";
+import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
+
+const routes = createBrowserRouter([
+    {
+        path: '/',
+        element: <ItemListContainer/>
+    },
+    {
+        path: '/product/:idProduct',
+        element: <ItemDetail/>
+    },
+    {
+        path: '/home',
+        element: <HomePage/>
+    },
+    {
+        path: '/contact',
+        element: <ContactPage/>
+    }
+])
 
 const Navigation = () => {
 
-    const routes = createBrowserRouter([
-        {
-            path: '/',
-            element: <ItemListContainer/>
-        },
-        {
-            path: '/product/idProduct',
-            element: <Item/>
-        },
-        {
-            path: '/home',
-            element: <HomePage/>
-        },
-        {
-            path: '/contact',
-            element: <ContactPage/>
-        }
-    ])
-    return (
+        return (
         <RouterProvider router={routes}/>
     )
 

@@ -6,3 +6,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
+.boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 500px;
+}

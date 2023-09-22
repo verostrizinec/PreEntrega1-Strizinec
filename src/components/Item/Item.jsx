@@ -14,24 +14,24 @@ const Item = ( {productos} ) => {
           <Card sx={{ maxWidth: 300 }}>
             <CardMedia
               sx={{ height: 140 }}
-              image={producto.imagen}
-              title={producto.nombre}
+              image={productos.imagen}
+              title={productos.nombre}
             />
             <CardContent> 
               <Typography gutterBottom variant="h5" component="div">
-                {producto.nombre}
+                {productos.nombre}
               </Typography>
               <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                {producto.descripcion}
+                {productos.descripcion}
               </Typography>
               <Typography variant="body2" color="text.secondary">
               <i className="bi bi-dot"></i>
-                Precio: $ {producto.precio}
+                Precio: $ {productos.precio}
               </Typography>
               <Typography variant="body2" color="text.secondary">
               <i className="bi bi-dot"></i>
-                {producto.contenido}
+                {productos.contenido}
               </Typography>
             </CardContent>
             <CardActions>

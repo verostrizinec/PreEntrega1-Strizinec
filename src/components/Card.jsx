@@ -4,18 +4,18 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import CartWidget from '../components/CartWidget/CartWidget'
-import '../../src/components/card.css';
+import { Link } from "react-router-dom";
+import "../components/Card.css"
 
 const CardCustom = ({ producto }) => {
     return (
       <div className='productos-container'>
         <Card sx={{ maxWidth: 300 }}>
-          <CardMedia
+        <Link to={`/product/${producto.id}`}><CardMedia
             sx={{ height: 140 }}
             image={producto.imagen}
             title={producto.nombre}
-          />
+          /></Link>
           <CardContent> 
             <Typography gutterBottom variant="h5" component="div">
               {producto.nombre}
@@ -34,9 +34,9 @@ const CardCustom = ({ producto }) => {
             </Typography>
           </CardContent>
           <CardActions>
-            <CartWidget />
-            <Button size="small">Comprar</Button>
-            <Button size="small">Vaciar Carrito</Button>
+            <div>
+            <Button size="small"><Link to={`/product/${producto.id}`}>Ver Detalle</Link></Button>
+            </div>
           </CardActions>
         </Card>
       </div>
