@@ -27,11 +27,11 @@ const ItemListContainer = () => {
 return (
 <div className="productos-container">
           {
-            isLoading
+            isLoading 
             ? <div className="lds-heart"><div></div></div>
             : 
             products.map((producto) => (
-              <CardCustom
+              <CardCustom 
                 key={producto.id}
                 producto={producto}
               />

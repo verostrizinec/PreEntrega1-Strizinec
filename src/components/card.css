@@ -5,6 +5,9 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
+    
 }
 
 .boton {

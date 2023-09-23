@@ -1,10 +1,11 @@
-import Navbar from "../NavBar/NavBar"
+import NavBar from "../NavBar/NavBar"
 import Footer from "../Footer/Footer"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const Layout = ({children}) => {
     return (
         <>
-        <Navbar />
+        <NavBar />
         <div>
             {children}
         </div>

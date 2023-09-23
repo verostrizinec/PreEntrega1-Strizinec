@@ -1,5 +1,3 @@
-// ItemDetail.js
-
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { productos } from "../../components/products"
@@ -18,7 +16,6 @@ const ItemDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Simulación de una llamada a una API o carga de datos en tiempo diferido
     setTimeout(() => {
       const selectedProduct = productos.find(
         (prod) => prod.id === parseInt(idProduct)
@@ -28,10 +25,9 @@ const ItemDetail = () => {
         setProduct(selectedProduct);
         setIsLoading(false);
       } else {
-        // Si no se encuentra el producto, puedes redirigir a una página de error o hacer algo similar
         console.error("Producto no encontrado");
       }
-    }, 2000); // Simula una carga de 2 segundos
+    }, 2000); 
   }, [idProduct]);
 
   return (
