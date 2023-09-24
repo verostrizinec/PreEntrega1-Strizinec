@@ -16,3 +16,19 @@
     align-items: center;
     font-size: 500px;
 }
+
+.categoria-productos {
+    color: #976c1c;
+    margin-top: 5%;
+}
+
+.Categorias {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.Productos {
+    padding-bottom: 50px;
+}
