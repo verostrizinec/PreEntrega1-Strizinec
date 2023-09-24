@@ -1,7 +1,6 @@
 export { default as ItemListContainer } from './components/ItemListContainer/ItemListContainer'
-export { default as ContactPage } from './pages/Contact'
-export { default as HomePage } from './pages/Home'
+export { default as ItemDetail} from './components/ItemDetail/ItemDetail'
 export { default as ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'
-export { default as CheckoutPage } from './pages/Checkout'
-
-
+export { default as Elaboraciones } from './pages/Elaboraciones'
+export { default as HomePage } from './pages/Home'
+export { default as ContactPage } from './pages/Contact'

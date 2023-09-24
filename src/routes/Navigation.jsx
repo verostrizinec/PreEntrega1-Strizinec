@@ -1,9 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import {HomePage, ContactPage, CheckoutPage} from '../index'
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
-import ItemDetail from "../components/ItemDetail/ItemDetail";
-import ItemDetailContainer from "../components/ItemDetailContainer/ItemDetailContainer";
-import Elaboraciones from "../pages/Elaboraciones";
+import {HomePage, ContactPage, ItemListContainer, ItemDetail, Elaboraciones, ItemDetailContainer} from '../index'
 
 const Navigation = () => {
 
@@ -16,7 +12,7 @@ const Navigation = () => {
             path: '/product/:idProduct',
             element: <ItemDetail/>
         },
-        {
+        { //category dps de la consigna se borra
             path: '/category/:id',
             element: <ItemListContainer/>
         },
