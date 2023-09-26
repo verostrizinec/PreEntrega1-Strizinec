@@ -1,6 +1,5 @@
 import "./App.css"
-import "./components/card.css"
-import Navigation from "./routes/Navigation"
+import "../src/components/Card.css"
 import Title from "./components/Title/Title"
 import Layout from "./components/Layout/Layout"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
