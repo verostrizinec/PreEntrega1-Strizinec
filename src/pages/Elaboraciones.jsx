@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { productos } from "../components/products";
-import '../components/card.css'
+import '../components/Card/Card.css'
 import { Button } from "@mui/material";
 
 const Elaboraciones = () => {

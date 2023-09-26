@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
 import { productos } from "../products"
-import Card from '../Card'
-import CardCustom from "../Card"
-import CartWidget from "../CartWidget/CartWidget"
-import "../Card.css"
+import CardCustom from "../Card/Card"
+import Card from "../Card/Card.jsx"
+import "../Card/Card.css"
 
 const ItemListContainer = () => {
   
