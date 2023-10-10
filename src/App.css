@@ -3,6 +3,17 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Esto evita la barra de desplazamiento horizontal */
+  }
+
+  html {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+  }
   
   .logo {
     height: 6em;

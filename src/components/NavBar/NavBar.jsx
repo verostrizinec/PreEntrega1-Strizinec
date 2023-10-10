@@ -4,23 +4,33 @@ import logo from '/img/logo-removebg-preview.png';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    return (
-        <nav className="container">
-            <div className="wave">
-                <Link to="/"> {/* Agrega este enlace para redirigir a la página principal */}
-                    <img className="logo" src={logo} alt="Logo Tritato" />
-                </Link>
-                <ul className='listContainer'>
-                    <li><Link to="/">Principal</Link></li> {/* Enlace a la página principal */}
-                    <li><Link to="/category/:id">Comprar</Link></li> {/* Enlace a la página de compra (ajusta la URL según corresponda) */}
-                    <li><Link to="/nosotros">Nosotros</Link></li> {/* Enlace a la página "Nosotros" (ajusta la URL según corresponda) */}
-                    <li><Link to="/elaboraciones">Elaboraciones</Link></li> {/* Enlace a la página "Elaboraciones" (ajusta la URL según corresponda) */}
-                    <li><Link to="/contacto">Contacto</Link></li> {/* Enlace a la página "Contacto" (ajusta la URL según corresponda) */}
-                    <CartWidget />
-                </ul>
-            </div>
-        </nav>
-    )
-}
+  const toggleMenu = () => {
+    const menu = document.querySelector('ul');
+    menu.classList.toggle('show');
+  };
+
+  return (
+    <nav className="container">
+      <div className="wave">
+        <Link to="/"> {/* Agrega este enlace para redirigir a la página principal */}
+          <img className="logo" src={logo} alt="Logo Tritato" />
+        </Link>
+        <div className="menu-toggle" id="menuToggle" onClick={toggleMenu}>
+          <div className="bar"></div>
+          <div className="bar"></div>
+          <div className="bar"></div>
+        </div>
+        <ul>
+          <Link to="/" className="lista">Principal</Link>
+          <Link to="/category/:id" className="lista">Comprar</Link>
+          <Link to="/nosotros" className="lista">Nosotros</Link>
+          <Link to="/elaboraciones" className="lista">Elaboraciones</Link>
+          <Link to="/contacto" className="lista">Contacto</Link>
+          <CartWidget />
+        </ul>
+      </div>
+    </nav>
+  );
+};
 
 export default Navbar;

@@ -1,0 +1,12 @@
+@media screen and (max-width: 768px) {
+    .Categorias {
+      margin-top: 100%;
+      background-color: #fff4df;
+      margin-bottom: 20%;
+    }
+
+    .categoria-productos {
+        margin-bottom: 20%;
+    }
+
+}

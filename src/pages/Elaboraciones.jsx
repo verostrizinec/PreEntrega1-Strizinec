@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { productos } from "../components/products";
-import '../components/Card/Card.css'
+import "../components/Item/Item.css"
 import { Button } from "@mui/material";
+import { Ring } from '@uiball/loaders'
 
 const Elaboraciones = () => {
   const [filterByCategory, setFilterByCategory] = useState(null);

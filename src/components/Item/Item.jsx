@@ -4,46 +4,46 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import CartWidget from '../CartWidget/CartWidget';
-import '../card.css';
+import { Link } from "react-router-dom";
 
-const Item = ( {productos} ) => {
-
-    return (
-        <div className='productos-container'>
-          <Card sx={{ maxWidth: 300 }}>
-            <CardMedia
-              sx={{ height: 140 }}
-              image={productos.imagen}
-              title={productos.nombre}
-            />
-            <CardContent> 
-              <Typography gutterBottom variant="h5" component="div">
-                {productos.nombre}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                  <i className="bi bi-dot"></i>
-                {productos.descripcion}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              <i className="bi bi-dot"></i>
-                Precio: $ {productos.precio}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-              <i className="bi bi-dot"></i>
-                {productos.contenido}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <CartWidget />
-              <Button size="small">Comprar</Button>
-              <Button size="small">Vaciar Carrito</Button>
-            </CardActions>
-          </Card>
-        </div>
-      );
-
-   
+const Item = ({ producto }) => {
+  return (
+    <div className='productos-container'>
+      <Card sx={{ maxWidth: 300 }}>
+        <Link to={`/product/${producto.id}`}>
+          <CardMedia
+            sx={{ height: 140 }}
+            image={producto.imagen}
+            title={producto.nombre}
+          />
+        </Link>
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="div">
+            {producto.nombre}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            <i className="bi bi-dot"></i>
+            {producto.descripcion}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            <i className="bi bi-dot"></i>
+            Precio: $ {producto.precio}
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            <i className="bi bi-dot"></i>
+            {producto.contenido}
+          </Typography>
+        </CardContent>
+        <CardActions>
+          <div>
+            <Button size="small">
+              <Link to={`/product/${producto.id}`}>Ver Detalle</Link>
+            </Button>
+          </div>
+        </CardActions>
+      </Card>
+    </div>
+  );
 }
 
-export default Item
+export default Item;

@@ -1,5 +1,5 @@
 import "./App.css"
-import "../src/components/Card/Card.css"
+import "../src/components/Item/Item.css"
 import Title from "./components/Title/Title"
 import Layout from "./components/Layout/Layout"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
@@ -10,15 +10,14 @@ import ItemDetail from "./components/ItemDetail/ItemDetail"
 import Elaboraciones from "./pages/Elaboraciones"
 import { HomePage } from "./index"
 import { ContactPage } from "./index"
-
-
-
+import { CartProvider } from "../src/components/CartWidget/CartContext"
 
 function App() {
 
   return (
 
     <BrowserRouter>
+    <CartProvider> 
     
     <Layout>
     <Title greeting={"Aportando un granito de harina al mundo.. 🍞"}/>
@@ -33,6 +32,7 @@ function App() {
       <Route path="/contacto" element= {<ContactPage/>}/>
     </Routes>
     </Layout>
+    </CartProvider>
     </BrowserRouter>
 
     

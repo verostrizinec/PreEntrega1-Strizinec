@@ -1,0 +1,32 @@
+.home-nosotros {
+    color: #815a10;
+    margin-top: 50px;
+    padding-right: 15%;
+    padding-left: 15%;
+    text-shadow: 3px 3px 4px rgba(129,90,16,0.6);
+}
+
+.texto-nosotros {
+    margin-top: 5%;
+    margin-bottom: 2%;
+    padding-right: 15%;
+    padding-left: 15%;
+    font-size: 20px;
+}
+
+.texto-nosotros-part2 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding-right: 15%;
+    padding-left: 15%;
+    font-size: 20px;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+.sobre-nosotros {
+    border-radius: 30%;
+}

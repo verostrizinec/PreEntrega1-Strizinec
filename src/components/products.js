@@ -56,7 +56,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 2500,
-        imagen: "img/focaccia.jpg",
+        imagen: "/img/focaccia.jpg",
     },
     {
         id: 6,
@@ -65,7 +65,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 1600,
-        imagen: "img/focacciaPresentada.jpg",
+        imagen: "/img/focacciaPresentada.jpg",
     },
     {
         id: 7,
@@ -74,7 +74,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 2500,
-        imagen: "img/pan.jpg",
+        imagen: "/img/pan.jpg",
     },
     {
         id: 8,
@@ -83,7 +83,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 1600,
-        imagen: "img/panEnMano.jpg",
+        imagen: "/img/panEnMano.jpg",
     },
     {
         id: 9,
@@ -92,7 +92,7 @@ export const productos = [
         categoria: "Pizza",
         descripcion: "Panificados",
         precio: 1000,
-        imagen: "img/amasando.JPG",
+        imagen: "/img/amasando.JPG",
     },
     {
         id: 10,
@@ -101,7 +101,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 1800,
-        imagen: "img/panCortado.jpg",
+        imagen: "/img/panCortado.jpg",
     },
     {
         id: 11,
@@ -110,7 +110,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 1800,
-        imagen: "img/panCuadrado.jpg",
+        imagen: "/img/panCuadrado.jpg",
     },
     {
         id: 12,
@@ -119,7 +119,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 1800,
-        imagen: "img/pancitos.jpg",
+        imagen: "/img/pancitos.jpg",
     },
     {
         id: 13,
@@ -128,7 +128,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 1200,
-        imagen: "img/panes.JPG",
+        imagen: "/img/panes.JPG",
     },
     {
         id: 14,
@@ -137,7 +137,7 @@ export const productos = [
         categoria: "Panificados",
         descripcion: "Panificados",
         precio: 800,
-        imagen: "img/tirandoHarina.jpg",
+        imagen: "/img/tirandoHarina.jpg",
     },
     {
         id: 15,
@@ -147,6 +147,6 @@ export const productos = [
         descripcion: "Catering",
         precio: "Consultar presupuesto",
         contenido: "Mini Hamburguesas caseras con Cheddar. Sliders de Pollo/Carne desmenuzada. Empanaditas de Carne, Pollo, Jamón y Queso. Bruscchetitas caprese/Crudo y Queso. Focaccias con Salsas. Mini Bagels con rellenos varios. Tablitas de quesos y fiambres.",
-        imagen: "img/quesos.jpg",
+        imagen: "/img/quesos.jpg",
     },
 ]

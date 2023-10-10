@@ -1,19 +1,14 @@
-/* Reseteo que debe existir en todo css: */
+/* Reseteo que debe existir en todo CSS: */
 
 html {
-    box-sizing: border-box;
-    font-family: "Raleway", sans-serif;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
-/*.navbar {
-  width: 100%;
-  height: 110px;
-  background-color: #e4b866;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+body {
+  margin: 0;
+  padding: 0;
 }
-*/
 
 nav {
   display: flex;
@@ -25,6 +20,7 @@ nav {
   position: relative;
   background: #e4b866;
   height: 30vh;
+  width: 100%;
 }
 
 .wave {
@@ -59,11 +55,22 @@ nav {
 
 ul {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-content: flex-start;
   list-style: none;
-  margin-top: -9%;
-  margin-left: 30%;
+  margin-top: -5%;
+  margin-left: 40%;
+  
+}
+
+ul.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 60px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+  right: 20px; /* Ajusta la distancia desde la derecha según tus necesidades */
+  background: #e4b866;
+  padding: 10px;
 }
 
 li {
@@ -77,7 +84,7 @@ h3 {
 .logo {
   height: 180px;
   margin-left: -70%;
-  margin-top: -9%;
+  margin-top: -12%;
 }
 
 .carrito {
@@ -85,4 +92,44 @@ h3 {
   justify-content: flex-end;
   margin-left: 25%;
 
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 6px 0;
+}
+
+.lista {
+  text-decoration: none;
+  font-size: 20px;
+  color: #815a10;
+}
+
+.lista:visited {
+  color: #815a10;
+}
+
+/* Estilos para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    float: right; /* Alinea el botón de hamburguesa a la derecha */
+    margin-right: 20px; /* Ajusta el margen derecho según tus necesidades */
+  }
+
+  ul {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajusta la distancia desde la parte superior según tus necesidades */
+    right: 0; /* Alinea el menú desplegable a la derecha */
+    background: #e4b866;
+    padding: 10px;
+  }
 }
