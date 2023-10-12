@@ -14,9 +14,24 @@ export const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (itemId) => {
-    const updatedCart = cart.filter((item) => item.id !== itemId);
+  // Buscar el producto en el carrito
+  const productIndex = cart.findIndex((item) => item.id === itemId);
+    
+  if (productIndex !== -1) {
+    const updatedCart = [...cart];
+    const productToRemove = updatedCart[productIndex];
+
+    if (productToRemove.quantity > 1) {
+      // Si hay más de un producto, reducir la cantidad en uno
+      productToRemove.quantity -= 1;
+    } else {
+      // Si hay solo uno, eliminarlo del carrito
+      updatedCart.splice(productIndex, 1);
+    }
+
     setCart(updatedCart);
-  };
+  }
+};
 
   const clearCart = () => {
     setCart([]);
