@@ -3,7 +3,7 @@
 
 - 🌱 En este proyecto utilicé las siguientes librerias: **Bootstrap, Material UI**
 
-- 🤝 Pueden encontrar el proyecto en el siguiente link: [https://github.com/verostrizinec/PreEntrega1-Strizinec](https://tritato.vercel.app/)
+- 🤝 Pueden encontrar el proyecto en el siguiente link: [https://github.com/verostrizinec/ProyectoFinalReact-Strizinec](https://tritato.vercel.app/)
 
 <h3>Connect with me:</h3>
 <p>
