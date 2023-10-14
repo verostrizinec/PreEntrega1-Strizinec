@@ -10,11 +10,12 @@ import { useCartContext } from "../CartWidget/CartContext";
 import "../ItemDetail/ItemDetail.css";
 import "../CartWidget/CartWidget.css";
 import { db } from "../../db/db.js";
-import { doc, getDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 
 const ItemDetail = () => {
   const { idProduct } = useParams(); // Obtiene el parámetro "idProduct" de React Router
   const [product, setProduct] = useState({}); // Estado para almacenar los datos del producto
+  const [products, setProducts] = useState([]); // Estado para almacenar la lista de productos
   const [isLoading, setIsLoading] = useState(true); // Estado para controlar la carga de datos
   const { addToCart, removeFromCart, clearCart, cart } = useCartContext(); // Obtiene funciones y datos del contexto del carrito
 
@@ -41,6 +42,27 @@ const ItemDetail = () => {
     getProductData();
   }, [idProduct]);
 
+  useEffect(() => {
+    // Configurar la referencia a la colección "productos" en Firebase.
+    const productsRef = collection(db, "productos");
+
+    // Obtener todos los productos de Firebase.
+    getDocs(productsRef)
+      .then((response) => {
+        // Formatear los datos obtenidos en un array de objetos.
+        const productsData = response.docs.map((productDoc) => ({
+          id: productDoc.id,
+          ...productDoc.data(),
+        }));
+
+        // Actualizar el estado con los productos obtenidos y marcar la carga como completa.
+        setProducts(productsData);
+      })
+      .catch((error) => {
+        console.error("Error al obtener los productos:", error);
+      });
+  }, []);
+
   return (
     <div>
       {isLoading ? ( // Muestra un indicador de carga mientras se obtienen los datos
@@ -54,7 +76,7 @@ const ItemDetail = () => {
               <Link to={`/product/${product.id}`}>
                 <CardMedia
                   sx={{ height: 240 }}
-                  image={product.imagen} 
+                  image={`/${product.imagen}`}
                   title={product.nombre}
                 />
               </Link>
@@ -64,15 +86,15 @@ const ItemDetail = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                  {product.descripcion} 
+                  {product.descripcion}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                  Precio: $ {product.precio} 
+                  Precio: $ {product.precio}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                  {product.contenido} 
+                  {product.contenido}
                 </Typography>
               </CardContent>
               <CardActions>
@@ -81,10 +103,10 @@ const ItemDetail = () => {
                   +
                 </Button>
                 <Button size="small" onClick={() => removeFromCart(product.id)}>
-                  - 
+                  -
                 </Button>
                 <Button size="small" onClick={() => clearCart()}>
-                  Vaciar Carrito 
+                  Vaciar Carrito
                 </Button>
               </CardActions>
               <Link to="/">Volver a la lista de productos</Link>

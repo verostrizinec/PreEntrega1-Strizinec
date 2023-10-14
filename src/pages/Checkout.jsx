@@ -5,6 +5,9 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { addDoc, collection } from "firebase/firestore";
 import { db } from "../db/db";
+import "../pages/checkout.css"
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
 
 const Checkout = () => {
   const { cart } = useCartContext(); // No necesitas totalPrice aquí
@@ -41,15 +44,40 @@ const Checkout = () => {
   };
 
   return (
-    <div className="container">
+    <div className="form-container">
       <h1 className="main-title">Finalizar Compra</h1>
       <form className="formulario" onSubmit={handleSubmit(comprar)}>
-        <input type="text" placeholder="Ingresá tu nombre" {...register("nombre")} />
-        <input type="email" placeholder="Ingresá tu email" {...register("email")} />
-        <input type="phone" placeholder="Ingresá tu telefono" {...register("telefono")} />
-        <button className="enviar" type="submit">
+      <div className="input-container">
+        <TextField className="form-text"
+          variant="outlined"
+          label="Ingresá tu nombre"
+          placeholder="Ingresá tu nombre"
+          {...register("nombre")}
+        />
+        </div>
+        <div className="input-container">
+        <TextField className="form-text"
+          variant="outlined"
+          label="Ingresá tu email"
+          placeholder="Ingresá tu email"
+          {...register("email")}
+        />
+        </div>
+        <div className="input-container">
+        <TextField className="form-text"
+          variant="outlined"
+          label="Ingresá tu teléfono"
+          placeholder="Ingresá tu teléfono"
+          {...register("telefono")}
+        />
+        </div>
+        <Button className="button"
+          type="submit"
+          variant="contained"
+          
+        >
           Comprar
-        </button>
+        </Button>
       </form>
     </div>
   );

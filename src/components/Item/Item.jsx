@@ -5,6 +5,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Link } from "react-router-dom";
+import "../Item/Item.css"
 
 const Item = ({ producto }) => {
   return (
@@ -35,8 +36,8 @@ const Item = ({ producto }) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <div>
-            <Button size="small">
+          <div className="boton">
+            <Button className="boton" size="small">
               <Link to={`/product/${producto.id}`}>Ver Detalle</Link>
             </Button>
           </div>

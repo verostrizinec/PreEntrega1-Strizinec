@@ -1,0 +1,30 @@
+.main-title {
+    color: #976c1c;
+    margin-top: 50px;
+    padding-right: 15%;
+    padding-left: 15%;
+    text-shadow: 3px 3px 4px rgba(129,90,16,0.6);
+    margin-bottom: 2rem;
+}
+
+
+.form-text {
+    width: 20%;
+}
+
+.form-text::placeholder {
+    color: #c59d51; 
+  }
+
+.formulario .button {
+    background-color: #976c1c;
+    font-weight: bold;
+}
+
+.formulario .button:hover {
+    background-color: #c59d51;
+  }
+
+.input-container {
+    margin-bottom: 1rem;
+}
