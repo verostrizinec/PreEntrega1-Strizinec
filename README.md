@@ -1,7 +1,7 @@
 <h1>Hola 👋, Mi nombre es Veronica Strizinec</h1>
 <h3>Este proyecto Tritato se ha desarrollado en el decorrer de la clase de React JS de CoderHouse.</h3>
 
-- 🌱 En este proyecto utilicé las siguientes librerias: **Bootstrap, Material UI**
+- 🌱 En este proyecto utilicé las siguientes librerias, que creo que le aportan una linda estetica al proyecto: **Bootstrap, Material UI**
 
 - 🤝 Pueden encontrar el proyecto en el siguiente link: [https://github.com/verostrizinec/ProyectoFinalReact-Strizinec](https://tritato.vercel.app/)
 

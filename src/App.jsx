@@ -11,6 +11,7 @@ import Elaboraciones from "./pages/Elaboraciones"
 import { HomePage } from "./index"
 import { ContactPage } from "./index"
 import { CartProvider } from "../src/components/CartWidget/CartContext"
+import Checkout from "./pages/Checkout"
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
       <Route path="/elaboraciones" element= {<Elaboraciones/>}/>
       <Route path="/nosotros" element= {<HomePage/>}/>
       <Route path="/contacto" element= {<ContactPage/>}/>
+      <Route path="/checkout" element= {<Checkout/>}/>
     </Routes>
     </Layout>
     </CartProvider>

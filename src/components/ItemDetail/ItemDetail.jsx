@@ -1,37 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { productos } from "../../components/products";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useCartContext } from "../CartWidget/CartContext"; 
+import { useCartContext } from "../CartWidget/CartContext";
 import "../ItemDetail/ItemDetail.css";
 import "../CartWidget/CartWidget.css";
+import { db } from "../../db/db.js";
+import { doc, getDoc } from "firebase/firestore"; 
 
 const ItemDetail = () => {
   const { idProduct } = useParams();
   const [product, setProduct] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const { addToCart, removeFromCart, clearCart, cart } = useCartContext(); 
+  const { addToCart, removeFromCart, clearCart, cart } = useCartContext();
 
   useEffect(() => {
-    setTimeout(() => {
-      const selectedProduct = productos.find(
-        (prod) => prod.id === parseInt(idProduct)
-      );
+    const getProductData = async () => {
+      try {
+        const productRef = doc(db, "productos", idProduct);
+        const docSnapshot = await getDoc(productRef);
 
-      if (selectedProduct) {
-        setProduct(selectedProduct);
+        if (docSnapshot.exists()) {
+          const selectedProduct = docSnapshot.data();
+          setProduct(selectedProduct);
+          setIsLoading(false);
+        } else {
+          console.error("Producto no encontrado");
+          setIsLoading(false);
+        }
+      } catch (error) {
+        console.error("Error al obtener el producto:", error);
         setIsLoading(false);
-      } else {
-        console.error("Producto no encontrado");
       }
-    }, 2000);
-  }, [idProduct]);
+    };
 
+    getProductData();
+  }, [idProduct]);
+  
   return (
     <div>
       {isLoading ? (
@@ -41,11 +50,11 @@ const ItemDetail = () => {
       ) : (
         <>
           <div className="item-detail">
-            <Card sx={{ maxWidth: 500, height: 500 }}>
+            <Card sx={{ maxWidth: 500 }}>
               <Link to={`/product/${product.id}`}>
                 <CardMedia
                   sx={{ height: 240 }}
-                  image={product.imagen}
+                  image={product.imagen}  
                   title={product.nombre}
                 />
               </Link>
@@ -77,11 +86,10 @@ const ItemDetail = () => {
                 <Button size="small" onClick={() => clearCart()}>
                   Vaciar Carrito
                 </Button>
-          </CardActions>
-          <Link to="/">Volver a la lista de productos</Link>
-        </Card>
-          
-        </div>
+              </CardActions>
+              <Link to="/">Volver a la lista de productos</Link>
+            </Card>
+          </div>
         </>
       )}
     </div>
