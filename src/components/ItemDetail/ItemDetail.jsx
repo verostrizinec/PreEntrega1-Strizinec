@@ -10,40 +10,40 @@ import { useCartContext } from "../CartWidget/CartContext";
 import "../ItemDetail/ItemDetail.css";
 import "../CartWidget/CartWidget.css";
 import { db } from "../../db/db.js";
-import { doc, getDoc } from "firebase/firestore"; 
+import { doc, getDoc } from "firebase/firestore";
 
 const ItemDetail = () => {
-  const { idProduct } = useParams();
-  const [product, setProduct] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
-  const { addToCart, removeFromCart, clearCart, cart } = useCartContext();
+  const { idProduct } = useParams(); // Obtiene el parámetro "idProduct" de React Router
+  const [product, setProduct] = useState({}); // Estado para almacenar los datos del producto
+  const [isLoading, setIsLoading] = useState(true); // Estado para controlar la carga de datos
+  const { addToCart, removeFromCart, clearCart, cart } = useCartContext(); // Obtiene funciones y datos del contexto del carrito
 
   useEffect(() => {
     const getProductData = async () => {
       try {
-        const productRef = doc(db, "productos", idProduct);
-        const docSnapshot = await getDoc(productRef);
+        const productRef = doc(db, "productos", idProduct); // Referencia al documento del producto en la base de datos
+        const docSnapshot = await getDoc(productRef); // Obtiene el documento del producto
 
         if (docSnapshot.exists()) {
-          const selectedProduct = docSnapshot.data();
-          setProduct(selectedProduct);
-          setIsLoading(false);
+          const selectedProduct = docSnapshot.data(); // Obtiene los datos del producto
+          setProduct(selectedProduct); // Almacena los datos del producto en el estado
+          setIsLoading(false); // Finaliza la carga
         } else {
-          console.error("Producto no encontrado");
-          setIsLoading(false);
+          console.error("Producto no encontrado"); // Registra un mensaje de error si el producto no existe
+          setIsLoading(false); // Finaliza la carga
         }
       } catch (error) {
-        console.error("Error al obtener el producto:", error);
-        setIsLoading(false);
+        console.error("Error al obtener el producto:", error); // Registra un mensaje de error si ocurre un error al obtener el producto
+        setIsLoading(false); // Finaliza la carga
       }
     };
 
     getProductData();
   }, [idProduct]);
-  
+
   return (
     <div>
-      {isLoading ? (
+      {isLoading ? ( // Muestra un indicador de carga mientras se obtienen los datos
         <div className="lds-heart">
           <div></div>
         </div>
@@ -54,7 +54,7 @@ const ItemDetail = () => {
               <Link to={`/product/${product.id}`}>
                 <CardMedia
                   sx={{ height: 240 }}
-                  image={product.imagen}  
+                  image={product.imagen} 
                   title={product.nombre}
                 />
               </Link>
@@ -64,15 +64,15 @@ const ItemDetail = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                  {product.descripcion}
+                  {product.descripcion} 
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                  Precio: $ {product.precio}
+                  Precio: $ {product.precio} 
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   <i className="bi bi-dot"></i>
-                  {product.contenido}
+                  {product.contenido} 
                 </Typography>
               </CardContent>
               <CardActions>
@@ -81,10 +81,10 @@ const ItemDetail = () => {
                   +
                 </Button>
                 <Button size="small" onClick={() => removeFromCart(product.id)}>
-                  -
+                  - 
                 </Button>
                 <Button size="small" onClick={() => clearCart()}>
-                  Vaciar Carrito
+                  Vaciar Carrito 
                 </Button>
               </CardActions>
               <Link to="/">Volver a la lista de productos</Link>

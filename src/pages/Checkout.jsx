@@ -1,22 +1,26 @@
+// Checkout.jsx
 import React, { useContext } from "react";
 import { useCartContext } from "../components/CartWidget/CartContext";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../db/db";
 
 const Checkout = () => {
-  const { cart, totalPrice } = useCartContext();
+  const { cart } = useCartContext(); // No necesitas totalPrice aquí
   const { register, handleSubmit } = useForm();
 
-  const comprar = (data) => {
+  const comprar = async (data) => {
     const pedido = {
       cliente: data,
       productos: cart,
-      total: totalPrice,
     };
 
-    // Muestra los datos del cliente y los productos en la consola
-    console.log("Datos del cliente:", pedido.cliente);
-    console.log("Productos del pedido:", pedido.productos);
+    // Guarda el pedido en Firebase y obtén el ID del documento generado
+    const orderDocRef = await addDoc(collection(db, "orders"), pedido);
+
+    // Obtiene el ID del pedido
+    const orderId = orderDocRef.id;
 
     // Abre el modal SweetAlert2
     Swal.fire({
@@ -30,8 +34,8 @@ const Checkout = () => {
       if (result.isConfirmed) {
         // Realiza aquí la lógica para finalizar la compra, como enviar los datos del pedido al servidor, etc.
         console.log("Compra finalizada");
-        // Cierra el modal SweetAlert2
-        Swal.fire("¡Compra finalizada!", "Gracias por tu compra.", "success");
+        // Muestra el ID del pedido en el mensaje
+        Swal.fire(`¡Compra finalizada! Order ID: ${orderId}`, "Gracias por tu compra.", "success");
       }
     });
   };
