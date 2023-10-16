@@ -16,7 +16,7 @@ const Elaboraciones = () => {
     : productos;
 
   return (
-    <div>
+    <div className="categorias-container">
       <h1 className="categoria-productos">Categoria de productos</h1>
       <ul className="Categorias">
         <Button className="Categorias-name" onClick={() => handleCategoryClick("Picadas")}>Picadas</Button>
@@ -26,11 +26,11 @@ const Elaboraciones = () => {
         <Button className="Categorias-name" onClick={() => handleCategoryClick("Catering")}>Catering</Button>
       </ul>
 
-      <Button onClick={() => setFilterByCategory(null)}>Limpiar filtro</Button>
+      <Button className="filtro" onClick={() => setFilterByCategory(null)}>Limpiar filtro</Button>
 
       <div className="Productos">
         {filteredProducts.map((producto) => (
-          <div className="Productos" key={producto.id}>
+          <div className="Productos-lista" key={producto.id}>
             <h2>{producto.nombre}</h2>
             <p>Categoría: {producto.categoria}</p>
             <p>Precio: ${producto.precio}</p>

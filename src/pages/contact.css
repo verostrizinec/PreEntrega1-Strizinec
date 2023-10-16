@@ -2,3 +2,25 @@ html {
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
 }
+
+.contact-title {
+    color: #976c1c;
+    text-shadow: 3px 3px 4px rgba(129,90,16,0.6);
+    margin: 2% 0 2% 0;
+}
+
+.button {
+    margin-bottom: 2%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .contact-title {
+        margin-top: 35%;
+    }
+
+    .form-text {
+        width: 200px;
+    }
+
+}

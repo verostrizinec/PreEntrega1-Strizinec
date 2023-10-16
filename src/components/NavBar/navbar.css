@@ -67,8 +67,8 @@ ul.show {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 60px; /* Ajusta la distancia desde la parte superior según tus necesidades */
-  right: 20px; /* Ajusta la distancia desde la derecha según tus necesidades */
+  top: 60px; 
+  right: 20px; 
   background: #e4b866;
   padding: 10px;
 }
@@ -116,20 +116,30 @@ h3 {
   color: #815a10;
 }
 
-/* Estilos para pantallas pequeñas */
+
 @media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    float: right; /* Alinea el botón de hamburguesa a la derecha */
-    margin-right: 20px; /* Ajusta el margen derecho según tus necesidades */
+    float: right; 
+    margin-right: 20px; 
   }
 
   ul {
     display: none;
     position: absolute;
-    top: 60px; /* Ajusta la distancia desde la parte superior según tus necesidades */
-    right: 0; /* Alinea el menú desplegable a la derecha */
+    top: 60px; 
+    right: 0; 
     background: #e4b866;
     padding: 10px;
   }
+
+  .logo {
+    margin-left: 20%;
+    margin-top: -100%;
+  }
+
+  .wave::before, .wave::after {
+    display: none;
+  }
+
 }

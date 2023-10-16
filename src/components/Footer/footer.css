@@ -100,3 +100,18 @@
     padding-top: 2%;
     padding: 10px;
 }
+
+@media screen and (max-width: 768px) {
+    .footer-logo {
+        margin-left: 10%;
+    }
+
+    .footer-social {
+        margin-left: 10%;
+    }
+
+    .titulo-social {
+        display: none;
+    }
+
+}

@@ -30,3 +30,9 @@ html {
 .sobre-nosotros {
     border-radius: 30%;
 }
+
+@media screen and (max-width: 768px) {
+    .sobre-nosotros {
+        width: 90%;
+    }
+}

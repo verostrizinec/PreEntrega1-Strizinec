@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <nav className="container">
       <div className="wave">
-        <Link to="/"> {/* Agrega este enlace para redirigir a la página principal */}
+        <Link to="/">
           <img className="logo" src={logo} alt="Logo Tritato" />
         </Link>
         <div className="menu-toggle" id="menuToggle" onClick={toggleMenu}>
