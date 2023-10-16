@@ -19,8 +19,10 @@ html {
         margin-top: 35%;
     }
 
-    .form-text {
-        width: 200px;
+    .input-container .form-text {
+        width: 300px;
     }
+
+
 
 }

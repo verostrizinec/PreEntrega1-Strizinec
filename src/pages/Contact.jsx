@@ -12,7 +12,7 @@ const Contact = () => {
 
     console.log(mensaje);
   };
-
+  
   return (
     <div>
       <h1 className="contact-title">Contactanos 👇</h1>

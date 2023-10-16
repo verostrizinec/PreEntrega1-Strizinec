@@ -76,7 +76,7 @@ const ItemDetail = () => {
               <Link to={`/product/${product.id}`}>
                 <CardMedia
                   sx={{ height: 240 }}
-                  image={`/${product.imagen}`}
+                  image={`${product.imagen}`}
                   title={product.nombre}
                 />
               </Link>
