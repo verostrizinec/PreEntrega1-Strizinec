@@ -5,7 +5,7 @@
 
 - 🌱 En este proyecto utilicé las siguientes librerias: **Bootstrap, Material UI, SweetAlert**
 
-- 🤝 Pueden encontrar el proyecto en el siguiente link: [https://github.com/verostrizinec/PreEntrega1-Strizinec](https://tritato.vercel.app/)
+- 🤝 Pueden encontrar el proyecto en el siguiente link: [https://github.com/verostrizinec/ProyectoFinalReact-Strizinec](https://tritato.vercel.app/)
 
 - 📝 Pueden encontrar mi historia en el siguiente portfolio: [https://verostrizinec.github.io/](https://verostrizinec.github.io/)
 
